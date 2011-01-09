@@ -1,0 +1,32 @@
+Member Secretary - a shareware application to manage individual memberships, events, atendence, and relationships
+
+Requirements:
+
+Server
+======
+PHP - version 5 or later
+MySQL
+
+Client
+======
+Adobe SWF file
+
+
+Instalation:
+- Create a subdirectory of the web server document root (e.g. named amfphp/)
+- Install the AMFPHP package into that directory. It creates various subdirectories
+- In www/amfphp/services, place the MemerSecretaryServices.php file
+
+- Create a database
+- Run "Member Secretary database schema.sql" to create tables and an admin account (admin/password)
+- Create a MySQL user (e.g. named "webclient"). 
+
+CREATE USER 'webclient'@'localhost' IDENTIFIED BY '***';
+
+- Grant rights to this user for the database you created above
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON MyDB . * TO 'webclient'@'localhost' ;
+
+- Make sure the user, password, and database name values match the constants in the header of MemerSecretaryServices.php
+
+

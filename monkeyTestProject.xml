@@ -1,0 +1,4 @@
+<project>
+  <targetSWF commMode="monkeyLink"/>
+  <generatedCode url="" suitesPackageName="testSuites"/>
+</project>

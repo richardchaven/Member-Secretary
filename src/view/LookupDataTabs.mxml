@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TabNavigator xmlns:mx="http://www.adobe.com/2006/mxml" visible="true" creationPolicy="all" xmlns:ns1="view.*">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.ListEvent;
+			import model.CoreObjects;
+
+			private var _core : CoreObjects;
+
+			public function get core() : CoreObjects
+			{
+				return _core
+			}
+
+			public function set core(value : CoreObjects) : void
+			{
+				if (_core != value)
+				{
+					_core = value
+					if (value != null)
+					{
+						MemberTypesGrid.dataProvider = value.memberTypeData;
+						RelationahipTypesGrid.dataProvider = value.personRelationshipTypeData;
+						TitlesGrid.dataProvider = value.personTitleTypeData;
+						EventTypesGrid.dataProvider = value.eventTypeData;
+						LocationsGrid.dataProvider = value.locationData;
+						InventoryTypesGrid.dataProvider = value.inventoryTypeData;
+					}
+					else
+					{
+						MemberTypesGrid.dataProvider = null;
+						RelationahipTypesGrid.dataProvider = null;
+						TitlesGrid.dataProvider = null;
+						EventTypesGrid.dataProvider = null;
+						LocationsGrid.dataProvider = null;
+						InventoryTypesGrid.dataProvider = null;
+					}
+				}
+			}
+			
+			private function onGridChange(event : ListEvent) : void
+			{
+				
+			}
+			
+			private function saveLookupChanges(event : ListEvent) : void
+			{
+				
+			}
+		]]>
+	</mx:Script>
+
+	<mx:CurrencyFormatter id="CurrencyFormat" useThousandsSeparator="true" />
+
+	<mx:Canvas label="Member Types" width="100%" height="100%" id="MemberTypesCanvas">
+		<ns1:InsertableDataGrid id="MemberTypesGrid" designViewDataType="flat" bottom="10" top="5" left="10"
+								sortExpertMode="true" editable="true"  rowExit="saveLookupChanges(event)" >
+			<ns1:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="title" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="description" />
+				<mx:AdvancedDataGridColumn headerText="Period" dataField="period">
+
+				</mx:AdvancedDataGridColumn>
+			</ns1:columns>
+		</ns1:InsertableDataGrid>
+
+		<!--
+			 filter Membership Type Included Inventory, Membership Type Inventory Prices,
+			 Membership Type Required Events, and Membership Type Volunteer Requirements as each Membership type gets selected
+		-->
+	</mx:Canvas>
+	<mx:Canvas label="Inventory Types" width="100%" height="100%" id="InventoryTypesCanvas">
+		<mx:AdvancedDataGrid id="InventoryTypesGrid" designViewDataType="flat" bottom="10" top="20" left="10"
+							 sortExpertMode="true">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="title" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="description" />
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+	</mx:Canvas>
+	<mx:Canvas label="Relationahips and Titles" width="100%" height="100%" id="RelationahipTypesTitlesCanvas">
+		<mx:AdvancedDataGrid id="RelationahipTypesGrid" designViewDataType="flat" bottom="10" top="20" left="10"
+							 sortExpertMode="true">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="title" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="description" />
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+		<mx:AdvancedDataGrid id="TitlesGrid" designViewDataType="flat" bottom="10" top="20" left="320"
+							 sortExpertMode="true">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="title" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="description" />
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+	</mx:Canvas>
+	<mx:Canvas label="Event Types" width="100%" height="100%" id="EventTypesCanvas">
+		<mx:AdvancedDataGrid id="EventTypesGrid" designViewDataType="flat" bottom="10" top="20" left="10"
+							 sortExpertMode="true" change="onGridChange(event)">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="defaultTitle" />
+				<mx:AdvancedDataGridColumn headerText="Type" dataField="eventClass" textAlign="center" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="defaultDescription" />
+				<mx:AdvancedDataGridColumn headerText="Default Price" dataField="defaultBasePrice" textAlign="right"
+										   formatter="{CurrencyFormat}" />
+				<mx:AdvancedDataGridColumn headerText="Renewal Period" dataField="defaultEffectivePeriod" />
+				<mx:AdvancedDataGridColumn headerText="Default Location" textAlign="center">
+					<mx:itemRenderer>
+						<mx:Component>
+							<mx:Text>
+								<mx:Script>
+									<![CDATA[
+										import model.vo.LocationVO;
+										import model.vo.EventTypeVO;
+
+										override public function set data(value : Object) : void
+										{
+											if (this.data != value)
+											{
+												super.data = value;
+
+												if (value is EventTypeVO)
+												{
+													var theLocation : LocationVO = EventTypeVO(value).defaultLocation;
+													if (theLocation != null)
+													{
+														this.text = theLocation.title;
+														return;
+													}
+												}
+											}
+										}
+									]]>
+								</mx:Script>
+							</mx:Text>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:AdvancedDataGridColumn>
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+	</mx:Canvas>
+	<mx:Canvas label="Locations" width="100%" height="100%" id="LocationsCanvas">
+		<mx:AdvancedDataGrid id="LocationsGrid" designViewDataType="flat" bottom="10" top="20" left="10"
+							 sortExpertMode="true">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn headerText="Title" dataField="title" />
+				<mx:AdvancedDataGridColumn headerText="Description" dataField="description" />
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+	</mx:Canvas>
+</mx:TabNavigator>

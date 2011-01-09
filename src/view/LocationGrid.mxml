@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:AdvancedDataGrid xmlns:mx="http://www.adobe.com/2006/mxml" id="LocationsGrid" designViewDataType="flat" bottom="20" top="10" left="10" right="10"
+						 						variableRowHeight="true" headerWordWrap="true"  editable="true"
+						 						 sortExpertMode="true" >
+	<mx:columns>
+ 		<mx:AdvancedDataGridColumn headerText="Event Count" dataField="col0" 
+ 			textAlign="center" editable="false">
+ 			<mx:itemRenderer> 
+ 				<mx:Component>
+ 					<mx:Text click="showLocationEvents()">						 									
+ 						<mx:Script>
+ 							<![CDATA[
+ 								private function showLocationEvents() : void
+ 								{
+ 									throw new Error("LocationGrid.showLocationEvents not yet implemented");	
+	 							}
+ 							]]>
+ 						</mx:Script>
+ 					</mx:Text>
+	 			</mx:Component>
+ 			</mx:itemRenderer>
+ 		</mx:AdvancedDataGridColumn>
+ 		<mx:AdvancedDataGridColumn headerText="Location Name" dataField="title"/>
+ 		<mx:AdvancedDataGridColumn headerText="Description" dataField="description"/>
+ 		<mx:AdvancedDataGridColumn headerText="Max Capacity" dataField="maximumCapacity" width="60" textAlign="center"/>
+ 		<mx:AdvancedDataGridColumn headerText="URL" dataField="url" width="75"/>
+ 		<mx:AdvancedDataGridColumn headerText="Public Notes" dataField="publicNotes" wordWrap="true"/>
+ 		<mx:AdvancedDataGridColumn headerText="Private Notes" dataField="privateNotes" wordWrap="true"/>
+ 	</mx:columns>
+</mx:AdvancedDataGrid>

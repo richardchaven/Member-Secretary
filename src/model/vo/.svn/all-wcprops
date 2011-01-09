@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo
+END
+LocationVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/LocationVO.as
+END
+BaseTitleDescriptionDataVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/BaseTitleDescriptionDataVO.as
+END
+PersonRelationshipTypeVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/PersonRelationshipTypeVO.as
+END
+IFindDataReference.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/IFindDataReference.as
+END
+InterestVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/InterestVO.as
+END
+MembershipTypeVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/MembershipTypeVO.as
+END
+PersonTitleTypesVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/PersonTitleTypesVO.as
+END
+InventoryTypeVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/InventoryTypeVO.as
+END
+BaseIdDataVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/BaseIdDataVO.as
+END
+BaseTableDataCollection.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/BaseTableDataCollection.as
+END
+EventTypeVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/EventTypeVO.as
+END
+BaseDataVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/BaseDataVO.as
+END
+PersonVO.as
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/vo/PersonVO.as
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/data
+END
+DataServices.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/data/DataServices.as
+END
+DatabaseConnection.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/data/DatabaseConnection.as
+END
+DataTransferObject.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/data/DataTransferObject.as
+END
+DataTransferList.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/santacruzsoftware_flex/!svn/ver/2/Member%20Secretary/src/model/data/DataTransferList.as
+END
